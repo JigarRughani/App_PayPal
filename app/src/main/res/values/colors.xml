@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="colorRed">#ff4043</color>
+    <color name="colorGreen">#59ff40</color>
+    <color name="colorBlack">#131313</color>
+
+    <color name="c_cool_blue">#ff48acc5</color>
+
+
+    <color name="c_app_key_color">@color/c_cool_blue</color>
+
+
+
+</resources>
