@@ -9,6 +9,7 @@ import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -17,6 +18,7 @@ import retrofit2.http.Path;
  */
 
 public interface Api {
+    @Headers({"Authorization:Key"})
 
     @FormUrlEncoded
     @POST("login")
@@ -29,4 +31,11 @@ public interface Api {
                                  @Path("pass") String pass,
                                  @Path("token_id") String token_id,
                                  @Path("mobile_key") String mobile_key);
+
+
+//    @FormUrlEncoded
+//    @POST("login.php")
+//    Call<PostLoginResponse>posrLoginDetail(@Field("user_nm") String user_nm,
+//                                            @Field("pass") String pass,
+//                                           @Field("type") String type);
 }

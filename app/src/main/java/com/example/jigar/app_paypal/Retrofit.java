@@ -3,6 +3,7 @@ package com.example.jigar.app_paypal;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.jigar.app_paypal.Interfaces.Api;
 import com.example.jigar.app_paypal.Responses.PostLoginResponse;
@@ -20,25 +21,46 @@ public class Retrofit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_retrofit);
 
-       // textView =(TextView) findViewById(R.id.tv_res);
-        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
-               .baseUrl("http://192.185.129.71/~webservices1/resto/")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        textView =(TextView) findViewById(R.id.tv_res);
+//        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
+//               .baseUrl("http://192.185.129.71/~webservices1/resto/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        Api api  = retrofit.create(Api.class);
+//
+//        Call<PostLoginResponse> call = api.postLoginDetail("jigar","123","admin");
+//        call.enqueue(new Callback<PostLoginResponse>() {
+//            @Override
+//            public void onResponse(Call<PostLoginResponse> call, Response<PostLoginResponse> response) {
+//                String aa = response.body().getMessage();
+//            }
+//
+//            @Override
+//            public void onFailure(Call<PostLoginResponse> call, Throwable t) {
+//
+//            }
+//        });
 
-        Api api  = retrofit.create(Api.class);
-
-        Call<PostLoginResponse> call = api.postLoginDetail("jigar","123","admin");
-        call.enqueue(new Callback<PostLoginResponse>() {
-            @Override
-            public void onResponse(Call<PostLoginResponse> call, Response<PostLoginResponse> response) {
-                String aa = response.body().getMessage();
-            }
-
-            @Override
-            public void onFailure(Call<PostLoginResponse> call, Throwable t) {
-
-            }
-        });
+//        retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
+//                .baseUrl("http://192.185.129.71/~webservices1/resto/")
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        Api api = retrofit.create(Api.class);
+//
+//        Call<PostLoginResponse> call = api.postLoginDetail("jigar","123","admin");
+//        call.enqueue(new Callback<PostLoginResponse>() {
+//            @Override
+//            public void onResponse(Call<PostLoginResponse> call, Response<PostLoginResponse> response) {
+//                String res= response.body().getMessage();
+//
+//            }
+//
+//            @Override
+//            public void onFailure(Call<PostLoginResponse> call, Throwable t) {
+//                Toast.makeText(Retrofit.this, "Fail", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
 }
